@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     [Header("GUN")] 
     [SerializeField] MagUIController _magUI;
     [SerializeField] private int _magSize = 8;
+    // public int _magSize { get; private set; } = 8;
+    public int MagSize {
+        private set => _magSize = value;
+        get => _magSize;
+    }
     [SerializeField] private float _blastForceModifier = 10f;
     [SerializeField] private float _fireRate = 0.2f;
     [SerializeField] private bool _momentum;
@@ -37,6 +42,7 @@ public class PlayerController : MonoBehaviour
         Vector2 knockbackDir = new Vector2(_mousePos.x - transform.position.x,
                                            _mousePos.y - transform.position.y).normalized;
         // print("Dir: " + knockbackDir + "\nM/T pos:\t" + _mousePos + "\t" + transform.position);
+        // Shooting
         if (_inputActions.FirePressed && _ammo != 0 && _fireTimer < 0)
         {
             print("Shoot!");

@@ -9,6 +9,7 @@ public class MagUIController : MonoBehaviour
         [SerializeField] private float _spacing;
         [SerializeField] private float _offset;
         [SerializeField] private int _magSize;
+        [SerializeField] PlayerController _player;
         [SerializeField] private float _sizemodifier;
         private RectTransform _rectTransform;
         private GameObject _parentRef;
@@ -20,6 +21,7 @@ public class MagUIController : MonoBehaviour
         
         public void InitUI()
         {
+            if (_player != null) { _magSize = _player.MagSize; }
             Sprite sprite = _liveShell;
             GameObject ParentRef = GameObject.Find("Mag UI");
             _parentRef = ParentRef;
