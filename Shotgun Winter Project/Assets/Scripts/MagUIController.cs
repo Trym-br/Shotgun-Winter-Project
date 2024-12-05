@@ -5,10 +5,35 @@ public class MagUIController : MonoBehaviour
 {
         [SerializeField] private Sprite _emptyShell;
         [SerializeField] private Sprite _liveShell;
-    
-        private int index = 0;
-        public void UpdateMagUI(int ammo)
+        
+        [SerializeField] private float _spacing;
+        [SerializeField] private int _magSize;
+        [SerializeField] private float _sizemodifier;
+
+        void Start()
         {
+            InitUI();
+        }
+        
+        public void InitUI()
+        {
+            Sprite sprite = _liveShell;
+            GameObject ParentRef = GameObject.Find("Mag UI");
+            for (int i = 0; i < _magSize; i++)
+            {
+                GameObject ChildRef = new GameObject("Shell " + i);
+                ChildRef.transform.SetParent(ParentRef.transform);
+                Image ChildImage = ChildRef.AddComponent<Image>();
+                RectTransform ChildRect = ChildRef.GetComponent<RectTransform>();
+                ChildImage.sprite = sprite;  
+                ChildRect.anchoredPosition = new Vector2(_spacing * i, 0);
+                ChildRect.sizeDelta = new Vector2(_sizemodifier * sprite.rect.width, _sizemodifier * sprite.rect.height);
+            }
+        }
+        
+        public void UpdateMagUI(int ammo)
+        { 
+            int index = 0;
             foreach (Transform child in transform)
             {
                 if (index < ammo)
@@ -21,7 +46,6 @@ public class MagUIController : MonoBehaviour
                 }
                 index += 1;
             }
-            index = 0;
         }
 
 }
