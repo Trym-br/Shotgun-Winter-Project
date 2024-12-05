@@ -17,6 +17,7 @@ public class InputActions : MonoBehaviour
         
     public bool InteractPressed { get; private set; }
     public bool FirePressed { get; private set; }
+    public bool ResetPressed { get; private set; }
     
     private void Update()
     {
@@ -31,6 +32,7 @@ public class InputActions : MonoBehaviour
         JumpHeld = _inputSystem.Player.Jump.IsPressed();
             
         FirePressed = _inputSystem.Player.Shoot.WasPressedThisFrame();
+        ResetPressed = _inputSystem.Player.Reset.WasPressedThisFrame();
     }
     
     #region Initialise Input Actions
