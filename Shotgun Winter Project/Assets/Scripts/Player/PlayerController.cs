@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Camera _mainCam;
     private Vector3 _mousePos;
-    [SerializeField] private float blastForceModifier = 10f;
+
+    [Header("GUN")] 
     [SerializeField] MagUIController _magUI;
-    
-    [Header("GUN")]
     [SerializeField] private int _magSize = 8;
+    [SerializeField] private float _blastForceModifier = 10f;
+    [SerializeField] private float _fireRate = 0.2f;
+    [SerializeField] private bool _momentum;
+    private float _fireTimer = 0f;
 
     public int _ammo { get; private set; } = 0;
 
@@ -34,13 +37,19 @@ public class PlayerController : MonoBehaviour
         Vector2 knockbackDir = new Vector2(_mousePos.x - transform.position.x,
                                            _mousePos.y - transform.position.y).normalized;
         // print("Dir: " + knockbackDir + "\nM/T pos:\t" + _mousePos + "\t" + transform.position);
-        if (_inputActions.FirePressed && _ammo != 0)
+        if (_inputActions.FirePressed && _ammo != 0 && _fireTimer < 0)
         {
             print("Shoot!");
-            _rigidbody2D.AddForce(knockbackDir * (blastForceModifier * -1), ForceMode2D.Impulse);
+            // Resets momentum, makes it less cheesed but also very easy to maneuver, so maybe don't?
+            if(!_momentum){_rigidbody2D.linearVelocity = Vector2.zero;}
+            _rigidbody2D.AddForce(knockbackDir * (_blastForceModifier * -1), ForceMode2D.Impulse);
+            
             _ammo--;
             _magUI.UpdateMagUI(_ammo);
+            
+            _fireTimer = _fireRate;
         }
+        _fireTimer -= Time.deltaTime;
 
         // Scene Reload
         if (_inputActions.ResetPressed) { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
