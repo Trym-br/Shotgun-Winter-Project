@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Camera _mainCam;
     private Vector3 _mousePos;
 
+    #region GUN
     [Header("GUN")] 
     [SerializeField] MagUIController _magUI;
     [SerializeField] private int _magSize = 8;
@@ -22,8 +23,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _fireRate = 0.2f;
     [SerializeField] private bool _momentum;
     private float _fireTimer = 0f;
-
     public int _ammo { get; private set; } = 0;
+    #endregion
+    
+    #region Animation
+    private Animator Upper_Body_Animator; 
+    private Animator Lower_Body_Animator; 
+    private Animator Shotgun_Animator; 
+    #endregion
+
 
     private void Start()
     {
@@ -33,6 +41,10 @@ public class PlayerController : MonoBehaviour
        _ammo = _magSize; 
        _magUI.UpdateMagUI(_ammo);
        SceneManager.sceneLoaded += OnSceneLoaded;
+       
+       Upper_Body_Animator = transform.GetChild(0).GetComponent<Animator>();
+       Lower_Body_Animator = transform.GetChild(1).GetComponent<Animator>();
+       Shotgun_Animator = transform.GetChild(2).GetComponent<Animator>();
     }
 
     private void Update()
@@ -45,6 +57,8 @@ public class PlayerController : MonoBehaviour
         // Shooting
         if (_inputActions.FirePressed && _ammo != 0 && _fireTimer < 0)
         {
+            Shotgun_Animator.SetTrigger("Shoot");
+            Upper_Body_Animator.SetTrigger("Flinch");
             print("Shoot!");
             // Resets momentum, makes it less cheesed but also very easy to maneuver, so maybe don't?
             if(!_momentum){_rigidbody2D.linearVelocity = Vector2.zero;}
