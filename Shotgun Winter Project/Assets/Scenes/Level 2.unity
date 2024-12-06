@@ -1824,6 +1824,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 460794555}
     - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
+      propertyPath: _magSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: _blastForceModifier
       value: 7.5
       objectReference: {fileID: 0}

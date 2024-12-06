@@ -294,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: _momentum
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: blastForceModifier
