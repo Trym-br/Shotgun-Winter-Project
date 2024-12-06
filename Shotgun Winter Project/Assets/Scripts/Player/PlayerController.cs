@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [Header("GUN")] 
     [SerializeField] MagUIController _magUI;
     [SerializeField] private int _magSize = 8;
-    // public int _magSize { get; private set; } = 8;
+    // way to make it accessible as read only, but still formatted correctly in inspector (very hacky solution)
     public int MagSize {
         private set => _magSize = value;
         get => _magSize;

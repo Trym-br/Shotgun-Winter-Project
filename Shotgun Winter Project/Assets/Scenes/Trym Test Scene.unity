@@ -1725,22 +1725,6 @@ PrefabInstance:
       propertyPath: _magUI
       value: 
       objectReference: {fileID: 1340232911}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _magSize
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _momentum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: <_magSize>k__BackingField
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8689529494838196360, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_Name
       value: Player
