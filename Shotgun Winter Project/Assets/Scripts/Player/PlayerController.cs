@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -86,13 +87,21 @@ public class PlayerController : MonoBehaviour
         _magUI.UpdateMagUI(_ammo);
         
         //Ejects cartridge
-        GameObject _ejectedCartridge = Instantiate(_cartrigdePrefab, _shotgunTransform.position, _shotgunTransform.rotation);
         // print("Shotgun forward: " + _shotgunTransform.up);
         // print("U/R|F: " + _shotgunTransform.up + " / " + _shotgunTransform.right + " / " + Vector3.Cross(_shotgunTransform.up, _shotgunTransform.right).normalized);
         // Vector3 dir = (_shotgunTransform.up + _shotgunTransform.right*-4)/2f; 
-        Vector3 dir = (_shotgunTransform.up + _shotgunTransform.right*-1)/2f; 
+        // GameObject _ejectedCartridge = Instantiate(_cartrigdePrefab, _shotgunTransform.position, _shotgunTransform.rotation);
+        // Vector3 dir = (_shotgunTransform.up + _shotgunTransform.right * -1) / 2f; 
+        // _ejectedCartridge.GetComponent<Rigidbody2D>().linearVelocity = dir * 8f;
+        StartCoroutine(EjectCartridge(0.5f));
+    }
+    IEnumerator EjectCartridge(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        print("YEET THAT SHELL");
+        GameObject _ejectedCartridge = Instantiate(_cartrigdePrefab, _shotgunTransform.position + new Vector3(0.16f,0,0), _shotgunTransform.rotation);
+        Vector3 dir = (_shotgunTransform.up + _shotgunTransform.right * -1) / 2f; 
         _ejectedCartridge.GetComponent<Rigidbody2D>().linearVelocity = dir * 8f;
-
     }
 
     void OnCollisionEnter2D(Collision2D other)
