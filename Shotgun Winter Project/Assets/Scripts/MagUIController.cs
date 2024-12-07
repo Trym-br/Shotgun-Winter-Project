@@ -24,6 +24,9 @@ public class MagUIController : MonoBehaviour
         if (_player != null) { _magSize = _player.MagSize; }
         Sprite sprite = _liveShell;
         GameObject ParentRef = GameObject.Find("Mag UI");
+        GameObject PouchRef = ParentRef.transform.GetChild(0).gameObject;
+        Sprite PouchSprite = PouchRef.GetComponent<Image>().sprite;
+        PouchRef.GetComponent<RectTransform>().sizeDelta = new Vector2(_sizemodifier * PouchSprite.rect.width, _sizemodifier * PouchSprite.rect.height);
         _parentRef = ParentRef;
         _rectTransform = ParentRef.GetComponent<RectTransform>();
         print(ParentRef);
@@ -36,7 +39,8 @@ public class MagUIController : MonoBehaviour
             ChildImage.sprite = sprite;
             ChildRect.anchorMin = new Vector2(0, 0.5f);
             ChildRect.anchorMax = new Vector2(0, 0.5f);
-            ChildRect.anchoredPosition = new Vector2(_offset + _spacing * i, 0);
+            // ChildRect.anchoredPosition = new Vector2(_offset + _spacing * i, 0);
+            ChildRect.anchoredPosition = new Vector2(_offset * _sizemodifier + _spacing * _sizemodifier * i, 0);
             ChildRect.sizeDelta = new Vector2(_sizemodifier * sprite.rect.width, _sizemodifier * sprite.rect.height);
             ChildRect.localScale = new Vector3(1, 1, 1);
             // print("Bullet " + i + ": " + new Vector2(_sizemodifier * sprite.rect.width, _sizemodifier * sprite.rect.height));
