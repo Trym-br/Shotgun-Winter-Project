@@ -25,7 +25,7 @@
 
 .button:hover {
     scale: 1.1 1.1;
-    color: rgb(159, 96, 44);
+    color: rgb(255, 255, 255);
     border-left-color: rgb(159, 96, 44);
     border-right-color: rgb(159, 96, 44);
     border-top-color: rgb(159, 96, 44);
@@ -41,7 +41,7 @@
 }
 
 .button:focus {
-    color: rgb(110, 79, 33);
+    color: rgb(17, 255, 0);
     border-left-color: rgb(110, 79, 33);
     border-right-color: rgb(110, 79, 33);
     border-top-color: rgb(110, 79, 33);
