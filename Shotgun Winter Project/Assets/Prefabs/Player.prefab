@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d73a23bfd0dd294f87b05e7db0e56e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cartrigdePrefab: {fileID: 0}
 --- !u!95 &730994592517031634
 Animator:
   serializedVersion: 7

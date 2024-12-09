@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     #region GUN
     [Header("GUN")]
     [SerializeField] private GameObject _cartrigdePrefab;
-    [SerializeField] MagUIController _magUI;
+    // [SerializeField] MagUIController _magUI;
+    [SerializeField] MagUIScalableController _magUI;
     [SerializeField] private int _magSize = 8;
     // way to make it accessible as read only, but still formatted correctly in inspector (very hacky solution)
     public int MagSize {
@@ -44,12 +45,13 @@ public class PlayerController : MonoBehaviour
        _rigidbody2D = GetComponent<Rigidbody2D>();
        _mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
        _ammo = _magSize; 
-       _magUI.UpdateMagUI(_ammo);
+       _magUI.InitUI(_magSize);
        SceneManager.sceneLoaded += OnSceneLoaded;
        
        Upper_Body_Animator = transform.GetChild(0).GetComponent<Animator>();
        Lower_Body_Animator = transform.GetChild(1).GetComponent<Animator>();
        Shotgun_Animator = transform.GetChild(2).GetComponent<Animator>();
+       Shotgun_Animator.SetFloat("AnimationSpeedModifier", 1/_fireRate);
        _shotgunTransform = transform.GetChild(2).transform;
     }
 

@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VardeController : MonoBehaviour
+public class FlagpoleController : MonoBehaviour
 {
     public SceneField scene;
 
