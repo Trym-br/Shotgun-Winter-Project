@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -8464585563829805951, guid: 02f87b7f03c96fd40b664296f59b9d61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 632578053}
+    - target: {fileID: 1017688339950366852, guid: 720227ee99b1a1445b2514d983b1b8f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1398943116995154645, guid: 720227ee99b1a1445b2514d983b1b8f9, type: 3}
       propertyPath: m_LocalPosition.y
       value: 450
@@ -1335,9 +1339,9 @@ GameObject:
   - component: {fileID: 2138557888}
   - component: {fileID: 2138557887}
   - component: {fileID: 2138557886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
