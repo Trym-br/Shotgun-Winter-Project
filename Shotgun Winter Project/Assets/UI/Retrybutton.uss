@@ -1,0 +1,43 @@
+.button {
+}
+
+.button {
+    flex-wrap: nowrap;
+    -unity-font-definition: url("project://database/Assets/UI/PressStart2P-vaV7.ttf?fileID=12800000&guid=86e31643067e2694eb456f326577cb6b&type=3#PressStart2P-vaV7");
+    -unity-text-align: middle-center;
+    height: 47px;
+    width: 341px;
+    -unity-font-style: bold;
+    font-size: 25px;
+    color: rgb(7, 18, 30);
+    -unity-text-outline-color: rgb(217, 197, 137);
+    -unity-text-outline-width: 1px;
+    background-color: rgb(8, 20, 30);
+    white-space: normal;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 76px;
+    border-left-color: rgb(255, 219, 137);
+    border-right-color: rgb(255, 219, 137);
+    border-top-color: rgb(255, 219, 137);
+    border-bottom-color: rgb(255, 219, 137);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.button#focus {
+    color: rgb(255, 0, 0);
+}
+
+.button:hover {
+    -unity-text-outline-color: rgb(110, 79, 33);
+    color: rgb(7, 18, 30);
+    border-left-color: rgb(159, 96, 44);
+    border-right-color: rgb(159, 96, 44);
+    border-top-color: rgb(159, 96, 44);
+    border-bottom-color: rgb(159, 96, 44);
+}

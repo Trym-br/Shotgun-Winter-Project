@@ -1,0 +1,53 @@
+.button {
+    width: 447px;
+    height: 197px;
+    align-items: auto;
+    justify-content: flex-start;
+    align-self: center;
+    font-size: 50px;
+    background-color: rgb(206, 206, 206);
+    border-left-color: rgb(217, 197, 137);
+    border-right-color: rgb(217, 197, 137);
+    border-top-color: rgb(217, 197, 137);
+    border-bottom-color: rgb(217, 197, 137);
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    -unity-font-style: bold;
+    color: rgb(217, 197, 137);
+    -unity-text-outline-color: rgba(7, 18, 30, 0);
+}
+
+.button {
+    -unity-text-align: middle-center;
+}
+
+.button:hover {
+    scale: 1.1 1.1;
+    color: rgb(159, 96, 44);
+    border-left-color: rgb(159, 96, 44);
+    border-right-color: rgb(159, 96, 44);
+    border-top-color: rgb(159, 96, 44);
+    border-bottom-color: rgb(159, 96, 44);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.button:focus {
+    color: rgb(110, 79, 33);
+    border-left-color: rgb(110, 79, 33);
+    border-right-color: rgb(110, 79, 33);
+    border-top-color: rgb(110, 79, 33);
+    border-bottom-color: rgb(110, 79, 33);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+}
