@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {       
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Camera _mainCam;
     private Vector3 _mousePos;
+    private AudioSource _audioSource;
     
     private bool _isGrounded;
 
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private float _fireTimer = 0f;
     public int _ammo { get; private set; } = 0;
     private Transform _shotgunTransform;
+    private ShotgunController _shotgunController;
     #endregion
     
     #region Animation
@@ -38,11 +41,16 @@ public class PlayerController : MonoBehaviour
     private Animator Shotgun_Animator; 
     #endregion
 
+    #region Audio
+    [Header("Audio")]
+    [SerializeField] private AudioClip _audioBunnyLand;
+    #endregion
 
     private void Start()
     {
        _inputActions = GetComponent<InputActions>();
        _rigidbody2D = GetComponent<Rigidbody2D>();
+       _audioSource = GetComponent<AudioSource>();
        _mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
        _ammo = _magSize; 
        _magUI.InitUI(_magSize);
@@ -53,6 +61,7 @@ public class PlayerController : MonoBehaviour
        Shotgun_Animator = transform.GetChild(2).GetComponent<Animator>();
        Shotgun_Animator.SetFloat("AnimationSpeedModifier", 1/_fireRate);
        _shotgunTransform = transform.GetChild(2).transform;
+       _shotgunController = transform.GetChild(2).GetComponent<ShotgunController>();
     }
 
     private void Update()
@@ -96,6 +105,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             _isGrounded = true; 
+            _audioSource.pitch = Random.Range(1.5f, 1.6f);
+            _audioSource.PlayOneShot(_audioBunnyLand, 2f);
             Lower_Body_Animator.SetBool("Grounded", true);
         }
     }
