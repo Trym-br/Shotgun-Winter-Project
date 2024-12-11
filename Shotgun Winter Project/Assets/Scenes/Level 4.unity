@@ -131,6 +131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Varde
       objectReference: {fileID: 0}
+    - target: {fileID: 7281476343293631524, guid: 025b24834fc88c448957d1f060de9648, type: 3}
+      propertyPath: scene._sceneName
+      value: EndScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281476343293631524, guid: 025b24834fc88c448957d1f060de9648, type: 3}
+      propertyPath: scene._sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 260a2c05966eab3468f65313cb197795, type: 3}
     - target: {fileID: 7840675688137692302, guid: 025b24834fc88c448957d1f060de9648, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.01
