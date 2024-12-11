@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {       
     private InputActions _inputActions;
     private Rigidbody2D _rigidbody2D;
+    private BoxCollider2D _feetCollider;
     private Camera _mainCam;
     private Vector3 _mousePos;
     private AudioSource _audioSource;
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
     {
        _inputActions = GetComponent<InputActions>();
        _rigidbody2D = GetComponent<Rigidbody2D>();
+       _feetCollider = GetComponent<BoxCollider2D>();
        _audioSource = GetComponent<AudioSource>();
        _mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
        _ammo = _magSize; 
@@ -102,7 +104,8 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        // print("Collision: " + other.gameObject.name + " / " + other.GetContact(0).otherCollider);
+        if (other.GetContact(0).otherCollider == _feetCollider && other.gameObject.CompareTag("Ground"))
         {
             _isGrounded = true; 
             _audioSource.pitch = Random.Range(1.5f, 1.6f);

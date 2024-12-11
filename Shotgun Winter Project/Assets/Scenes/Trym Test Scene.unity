@@ -1394,8 +1394,8 @@ Tilemap:
   - first: {x: 9, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1444,8 +1444,8 @@ Tilemap:
   - first: {x: 9, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1494,8 +1494,8 @@ Tilemap:
   - first: {x: 9, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1677,9 +1677,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b1893a4920a56cb4892495a3030625a2, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: a3258f0bb8cb607489f6e597c7faf125, type: 2}
-  - m_RefCount: 26
+  - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 410cd88fd53fb2e4a8ee3e0333472b35, type: 2}
-  - m_RefCount: 15
+  - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: b94b6305f2b5eff499b20a8e264d2edc, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 7a23c392230694b4883876d874f2e25c, type: 2}
@@ -1692,9 +1692,9 @@ Tilemap:
     m_Data: {fileID: -1190785162, guid: 5d00fe5336b2dbd46b1bc849b6a57d97, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 658080198, guid: 5d00fe5336b2dbd46b1bc849b6a57d97, type: 3}
-  - m_RefCount: 26
+  - m_RefCount: 23
     m_Data: {fileID: -307417719, guid: 5d00fe5336b2dbd46b1bc849b6a57d97, type: 3}
-  - m_RefCount: 15
+  - m_RefCount: 18
     m_Data: {fileID: -1343777352, guid: 5d00fe5336b2dbd46b1bc849b6a57d97, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: -32280461, guid: 5d00fe5336b2dbd46b1bc849b6a57d97, type: 3}
@@ -2460,7 +2460,7 @@ Transform:
   m_GameObject: {fileID: 1803324911}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.375, z: -10}
+  m_LocalPosition: {x: 0, y: -0.375, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
