@@ -1420,6 +1420,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
+      propertyPath: _fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: _cartrigdePrefab
       value: 
       objectReference: {fileID: 2339938340951815572, guid: c4e1a02382d3ed143ab0fd408692a18e, type: 3}
