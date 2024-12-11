@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,8 +15,10 @@ public class MagUIScalableController : MonoBehaviour
     [SerializeField] private float _offset;
     private RectTransform _rectTransform;
     private GameObject _parentRef;
+    // [SerializeField] private int _magSizeLocal;
     public void InitUI(int _magSize)
     {
+        // _magSizeLocal = _magSize;
         _spacing = _liveShell.rect.width;
         // print("spacing: " + _spacing + " | rect size: " + _liveShell.rect.width);
         Sprite sprite = _liveShell;
@@ -86,6 +89,32 @@ public class MagUIScalableController : MonoBehaviour
                 child.gameObject.GetComponent<Image>().sprite = _emptyShell;
             }
             index += 1;
+        }
+    }
+
+    private PlayerController _playerRef;
+    public void OnDrawGizmos()
+    {
+        if (_playerRef == null) { _playerRef = GameObject.Find("Player").GetComponent<PlayerController>(); }
+        Gizmos.color = Color.yellow;
+        Vector3 totalSize = new Vector3(1,1,1);
+        totalSize.x =
+            (_beltStart.rect.width * _sizemodifier) +
+            (_liveShell.rect.width * _sizemodifier * _playerRef.MagSize) +
+            (_beltEnd.rect.width * _sizemodifier)
+            ;
+        totalSize.y = _beltStart.rect.height * _sizemodifier;
+        // ??? divided by pixel to unit amount and by _sizemodifier, effectively becoming raw asset pixels divided by pixels pr unit?
+        // but it lines up pixel perfect??
+        totalSize.x /= 32;
+        totalSize.y /= 32;
+        totalSize.x /= 3;
+        totalSize.y /= 3;
+        // print("totalsize: " + totalSize);
+        Gizmos.DrawWireCube(transform.position + new Vector3(totalSize.x/2, 0, 0), totalSize);
+        if (!UnityEditor.EditorApplication.isPlaying)
+        {
+            Gizmos.DrawCube(transform.position + new Vector3(totalSize.x/2, 0, 20), totalSize);
         }
     }
 }
