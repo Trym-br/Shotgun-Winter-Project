@@ -79,7 +79,7 @@ AnimationClip:
   - time: 0.016666668
     functionName: EjectCartridge
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: d4230a99b9d3a5b41b4c1fd3c93ce833, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
