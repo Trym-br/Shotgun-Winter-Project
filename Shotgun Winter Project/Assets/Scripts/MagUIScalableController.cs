@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -93,6 +94,7 @@ public class MagUIScalableController : MonoBehaviour
     }
 
     private PlayerController _playerRef;
+#if UNITY_EDITOR
     public void OnDrawGizmos()
     {
         if (_playerRef == null) { _playerRef = GameObject.Find("Player").GetComponent<PlayerController>(); }
@@ -117,4 +119,5 @@ public class MagUIScalableController : MonoBehaviour
             Gizmos.DrawCube(transform.position + new Vector3(totalSize.x/2, 0, 20), totalSize);
         }
     }
+#endif
 }
