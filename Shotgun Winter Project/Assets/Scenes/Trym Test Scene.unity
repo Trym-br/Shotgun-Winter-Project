@@ -376,7 +376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &746328836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,8 +606,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _color
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: _speed
-      value: 10
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _fadeTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1096575759106855965, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_Name
@@ -616,6 +628,22 @@ PrefabInstance:
     - target: {fileID: 2010994142591850447, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49e1aa50474624b4a8b689fca9b8edb2, type: 3}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2024,20 +2052,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
-      propertyPath: Color
-      value: 2
+      propertyPath: _color
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _delay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: _speed
-      value: 10
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _fadeTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1096575759106855965, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_Name
       value: Firework (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2010994142591850447, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49e1aa50474624b4a8b689fca9b8edb2, type: 3}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2053,7 +2101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9503801
+      value: -0.9238795
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2065,7 +2113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.31109107
+      value: 0.3826835
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2097,8 +2145,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _delay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: _speed
-      value: 10
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096288463715055706, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: _fadeTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1096575759106855965, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_Name
@@ -2107,6 +2163,22 @@ PrefabInstance:
     - target: {fileID: 2010994142591850447, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49e1aa50474624b4a8b689fca9b8edb2, type: 3}
+    - target: {fileID: 4166472010719858083, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4578715193174559133, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2161,6 +2233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 62575691015071875, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3279436959919585070, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2205,6 +2281,10 @@ PrefabInstance:
       propertyPath: _magUI
       value: 
       objectReference: {fileID: 197056242}
+    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: _audioBunnyLand
       value: 
@@ -2404,6 +2484,6 @@ SceneRoots:
   - {fileID: 7229430374701858171}
   - {fileID: 1402880276}
   - {fileID: 299307020}
-  - {fileID: 941117383123455101}
   - {fileID: 1047729580}
+  - {fileID: 941117383123455101}
   - {fileID: 2070776870}

@@ -50,7 +50,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7326694370432934526, guid: f5e7809f065f6a04e8fc5ae2038db815, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7789709280651800878
@@ -151,3 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661f5ab031b717c4e92239f3155bd63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _color: 1
+  _speed: 4
+  _delay: 1
+  _animationSpeed: 0.1
+  _fadeTime: 3
