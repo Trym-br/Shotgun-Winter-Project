@@ -301,6 +301,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89248a24cccf1644786f2d69cddb92f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &299307020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _endMusic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _levelMusic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _endScene._sceneName
+      value: EndScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _endScene._sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 260a2c05966eab3468f65313cb197795, type: 3}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _menuScene._sceneName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _menuScene._sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: bbb1de306655e0741ab17c327e66e386, type: 3}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324906583207175034, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: m_Name
+      value: Music Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
 --- !u!1 &312816909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,12 +2866,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7562960333838755701, guid: 5f13094c28cd74040a3eecc80a68c068, type: 3}
       propertyPath: scene._sceneName
-      value: Level 1
+      value: EndScene
       objectReference: {fileID: 0}
     - target: {fileID: -7562960333838755701, guid: 5f13094c28cd74040a3eecc80a68c068, type: 3}
       propertyPath: scene._sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 0e62405c06e66ee4db97eba1b2a92503, type: 3}
+      objectReference: {fileID: 102900000, guid: 260a2c05966eab3468f65313cb197795, type: 3}
     - target: {fileID: 7088631785151178264, guid: 5f13094c28cd74040a3eecc80a68c068, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.1875
@@ -2852,3 +2933,4 @@ SceneRoots:
   - {fileID: 7229430374701858171}
   - {fileID: 1402880276}
   - {fileID: 1592504794}
+  - {fileID: 299307020}
