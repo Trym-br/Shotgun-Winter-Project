@@ -10,7 +10,8 @@ public class KillboxController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Destroy(other.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            other.gameObject.GetComponent<PlayerController>().die();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     
@@ -19,7 +20,8 @@ public class KillboxController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             // Destroy(other.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            other.gameObject.GetComponent<PlayerController>().die();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

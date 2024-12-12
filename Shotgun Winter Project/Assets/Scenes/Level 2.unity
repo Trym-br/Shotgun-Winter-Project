@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 36959400}
   - component: {fileID: 36959399}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 987017443}
   - component: {fileID: 987017442}
   - component: {fileID: 987017441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3394,7 +3394,7 @@ GameObject:
   - component: {fileID: 1783546707}
   - component: {fileID: 1783546706}
   - component: {fileID: 1783546705}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Screen Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}

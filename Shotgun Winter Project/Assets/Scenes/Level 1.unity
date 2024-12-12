@@ -343,9 +343,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1193451018}
   - component: {fileID: 1193451017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,9 +2407,9 @@ GameObject:
   - component: {fileID: 1983571875}
   - component: {fileID: 1983571874}
   - component: {fileID: 1983571873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Screen Edge
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -477,9 +477,9 @@ GameObject:
   - component: {fileID: 909411146}
   - component: {fileID: 909411145}
   - component: {fileID: 909411144}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Screen Edge
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1178,9 +1178,9 @@ GameObject:
   - component: {fileID: 997670397}
   - component: {fileID: 997670396}
   - component: {fileID: 997670395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hazards
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2224,10 +2224,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 623505447797354216, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _cartrigdePrefab
-      value: 
-      objectReference: {fileID: 2339938340951815572, guid: c4e1a02382d3ed143ab0fd408692a18e, type: 3}
     - target: {fileID: 3279436959919585070, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.43
@@ -2272,22 +2268,6 @@ PrefabInstance:
       propertyPath: _magUI
       value: 
       objectReference: {fileID: 495941810}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _magSize
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _cartrigdePrefab
-      value: 
-      objectReference: {fileID: 2339938340951815572, guid: c4e1a02382d3ed143ab0fd408692a18e, type: 3}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _blastForceModifier
-      value: 7.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8689529494838196360, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2318,7 +2298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875436005}
   - component: {fileID: 1875436004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

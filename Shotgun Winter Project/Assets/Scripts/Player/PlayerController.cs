@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {       
     private InputActions _inputActions;
     private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _feetCollider;
     private Camera _mainCam;
     private Vector3 _mousePos;
@@ -39,7 +40,8 @@ public class PlayerController : MonoBehaviour
     #region Animation
     private Animator Upper_Body_Animator; 
     private Animator Lower_Body_Animator; 
-    private Animator Shotgun_Animator; 
+    private Animator Shotgun_Animator;
+    [SerializeField] private float _deathDelay = 2;
     #endregion
 
     #region Audio
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
        _inputActions = GetComponent<InputActions>();
        _rigidbody2D = GetComponent<Rigidbody2D>();
+       _spriteRenderer = GetComponent<SpriteRenderer>();
        _feetCollider = GetComponent<BoxCollider2D>();
        _audioSource = GetComponent<AudioSource>();
        _mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -59,7 +62,9 @@ public class PlayerController : MonoBehaviour
        SceneManager.sceneLoaded += OnSceneLoaded;
        
        Upper_Body_Animator = transform.GetChild(0).GetComponent<Animator>();
+       // Upper_Body_Renderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
        Lower_Body_Animator = transform.GetChild(1).GetComponent<Animator>();
+       // Lower_Body_Renderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
        Shotgun_Animator = transform.GetChild(2).GetComponent<Animator>();
        Shotgun_Animator.SetFloat("AnimationSpeedModifier", 1/_fireRate);
        _shotgunTransform = transform.GetChild(2).transform;
@@ -121,6 +126,21 @@ public class PlayerController : MonoBehaviour
            _isGrounded = false; 
             Lower_Body_Animator.SetBool("Grounded", false);
         }
+    }
+
+    public void die()
+    {
+        StartCoroutine(DeathAnimation());
+    }
+    IEnumerator DeathAnimation()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        _spriteRenderer.enabled = true;
+        yield return new WaitForSeconds(_deathDelay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
