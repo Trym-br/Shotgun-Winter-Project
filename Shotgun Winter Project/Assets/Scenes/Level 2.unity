@@ -243,13 +243,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System (Snow)
       objectReference: {fileID: 0}
+    - target: {fileID: 1660382024370649432, guid: a345fefa86ff55749b9d27bfbf7c2b9b, type: 3}
+      propertyPath: VelocityModule.x.minScalar
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 2907870286299399571, guid: a345fefa86ff55749b9d27bfbf7c2b9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.78
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907870286299399571, guid: a345fefa86ff55749b9d27bfbf7c2b9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 10.96
       objectReference: {fileID: 0}
     - target: {fileID: 2907870286299399571, guid: a345fefa86ff55749b9d27bfbf7c2b9b, type: 3}
       propertyPath: m_LocalPosition.z
