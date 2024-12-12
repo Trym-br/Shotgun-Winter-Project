@@ -89,6 +89,11 @@ public class PlayerController : MonoBehaviour
     {
         // Calculates knockbackDirection
         _mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 NormalizedMousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
+        if (NormalizedMousePos.x < 0.005)
+        {
+            _mousePos.x -= 0.5f;
+        }
         Vector2 knockbackDir = new Vector2(_mousePos.x - transform.position.x,
                                            _mousePos.y - transform.position.y).normalized;
         // Starts Animations

@@ -18,10 +18,22 @@ public class ShotgunController : MonoBehaviour
     }
 
     // Update is called once per frame
+    [SerializeField] private bool _boostActive;
     void Update()
     {
         // Rotate / follow mouse
         _mousePos = _mainCam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 NormalizedMousePos = new Vector2(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height);
+        if (NormalizedMousePos.x < 0.005)
+        {
+            _mousePos.x -= 0.5f;
+            _boostActive = true;
+        }
+        else
+        {
+            _boostActive = false;
+        }
+        // print("Mousepos: " + NormalizedMousePos);
         Vector3 rotation = _mousePos - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
