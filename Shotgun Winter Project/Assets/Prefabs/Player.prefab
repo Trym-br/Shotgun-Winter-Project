@@ -805,5 +805,5 @@ MonoBehaviour:
   _deadSprite: {fileID: 6232357022977186929, guid: aeea078b00275c249999817df8771f8a, type: 3}
   _deathDelay: 2
   _fireworkPrefab: {fileID: 1096575759106855965, guid: ed8015c53a4c4dd44809eed66d771c11, type: 3}
-  _audioBunnyLand: {fileID: 8300000, guid: 80ac97058b0b5d5458a2e7cd4f7f37a0, type: 3}
+  _audioBunnyLand: {fileID: 8300000, guid: 7c7b01888d00fdd4da883d78d696e00e, type: 3}
   _audioFireFirework: {fileID: 8300000, guid: 3461e818566a8134aaba602fe3bbf0db, type: 3}
