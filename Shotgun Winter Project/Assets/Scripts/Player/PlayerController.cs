@@ -80,12 +80,9 @@ public class PlayerController : MonoBehaviour
        _shotgunTransform = transform.GetChild(2).transform;
        _shotgunController = transform.GetChild(2).GetComponent<ShotgunController>();
        
-       // Get the main camera
-       Camera mainCamera = Camera.main;
-       // Find the center of the screen in screen-space coordinates
-       Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, mainCamera.nearClipPlane);
+       Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
        // Convert screen-space to world-space
-       _worldCenter = mainCamera.ScreenToWorldPoint(screenCenter); 
+       _worldCenter = _mainCam.ScreenToWorldPoint(screenCenter); 
        print("Worldcenter: " + _worldCenter);
     }
 
@@ -162,6 +159,7 @@ public class PlayerController : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+        _animator.enabled = false;
         _spriteRenderer.sprite = _deadSprite;
         _spriteRenderer.enabled = true;
         yield return new WaitForSeconds(_deathDelay);
@@ -206,6 +204,7 @@ public class PlayerController : MonoBehaviour
             FireworkController fireworkControllerRef = fireworkRef.GetComponent<FireworkController>();
             fireworkControllerRef._speed = 0;
             fireworkControllerRef._delay = 1.5f;
+            fireworkRef.GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
         // Vector3 pos = new Vector3(0,2,0);
     }

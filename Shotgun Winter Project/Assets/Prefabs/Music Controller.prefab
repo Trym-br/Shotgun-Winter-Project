@@ -147,7 +147,7 @@ MonoBehaviour:
   _menuMusicVolume: 0.7
   _levelMusic: {fileID: 8300000, guid: 9d6f75289f9a6e4448e4158ebc6518cf, type: 3}
   _levelMusicVolume: 0.3
-  _endMusic: {fileID: 8300000, guid: 2600b40834af7914db800c3888263b87, type: 3}
+  _endMusic: {fileID: 8300000, guid: 9b03866944544c84d884d946bbef0118, type: 3}
   _endMusicVolume: 0.7
   _victoryMusic: {fileID: 8300000, guid: f6c4f05cf745cd840973016bc9d14de5, type: 3}
   _victoryMusicVolume: 0.3
