@@ -142,9 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd131a6b8198bfe42a9c43d62ef0702f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuMusic: {fileID: 0}
-  _levelMusic: {fileID: 0}
-  _endMusic: {fileID: 0}
+  _menuMusic: {fileID: 8300000, guid: d6487c5ec22f3644bb7025a00b6c153b, type: 3}
+  _levelMusic: {fileID: 8300000, guid: 9d6f75289f9a6e4448e4158ebc6518cf, type: 3}
+  _endMusic: {fileID: 8300000, guid: 2600b40834af7914db800c3888263b87, type: 3}
   _menuScene:
     _sceneAsset: {fileID: 102900000, guid: bbb1de306655e0741ab17c327e66e386, type: 3}
     _sceneName: MainMenu

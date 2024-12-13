@@ -423,18 +423,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
-      propertyPath: _endMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 2600b40834af7914db800c3888263b87, type: 3}
-    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
-      propertyPath: _menuMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: d6487c5ec22f3644bb7025a00b6c153b, type: 3}
-    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
-      propertyPath: _levelMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 9d6f75289f9a6e4448e4158ebc6518cf, type: 3}
     - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.7435

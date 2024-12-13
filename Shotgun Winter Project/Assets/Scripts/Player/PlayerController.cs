@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Camera _mainCam;
     private Vector3 _mousePos;
     private AudioSource _audioSource;
+    private bool Alive;
     
     private bool _isGrounded;
 
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Alive = true;
        _inputActions = GetComponent<InputActions>();
        _rigidbody2D = GetComponent<Rigidbody2D>();
        _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -74,7 +76,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // Shooting
-        if (_inputActions.FirePressed && _ammo != 0 && _fireTimer < 0)
+        if (_inputActions.FirePressed && _ammo != 0 && _fireTimer < 0 && Alive)
         {
             Shoot();
             _fireTimer = _fireRate;
@@ -135,6 +137,7 @@ public class PlayerController : MonoBehaviour
 
     public void die()
     {
+        Alive = false;
         StartCoroutine(DeathAnimation());
     }
     IEnumerator DeathAnimation()
