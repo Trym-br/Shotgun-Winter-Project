@@ -13,7 +13,8 @@ public class FlagpoleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && scene != null)
         {
-            SceneManager.LoadScene(scene);
+            other.gameObject.GetComponent<PlayerController>().Victory(scene.SceneName);
+            // SceneManager.LoadScene(scene);
         }
     }
     
@@ -21,7 +22,8 @@ public class FlagpoleController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && scene != null)
         {
-            SceneManager.LoadScene(scene);
+            other.gameObject.GetComponent<PlayerController>().Victory(scene.SceneName);
+            // SceneManager.LoadScene(scene);
         }
     }
 }

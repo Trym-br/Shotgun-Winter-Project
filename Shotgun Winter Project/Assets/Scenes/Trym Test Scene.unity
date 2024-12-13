@@ -309,6 +309,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _endMusicVolume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 347262722260498259, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
+      propertyPath: _menuMusicVolume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6664438196036486639, guid: 49a8ccc8caa0a1c4691004f0b337ad1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2233,10 +2241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 62575691015071875, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3279436959919585070, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2281,14 +2285,6 @@ PrefabInstance:
       propertyPath: _magUI
       value: 
       objectReference: {fileID: 197056242}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6497713659896882142, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
-      propertyPath: _audioBunnyLand
-      value: 
-      objectReference: {fileID: 8300000, guid: 80ac97058b0b5d5458a2e7cd4f7f37a0, type: 3}
     - target: {fileID: 8689529494838196360, guid: 5e26fe5909a141e409167e1edd5d3739, type: 3}
       propertyPath: m_Name
       value: Player

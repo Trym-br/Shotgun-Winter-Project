@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _feetCollider;
+    private Animator _animator;
     private Camera _mainCam;
     private Vector3 _mousePos;
+    private Vector3 _worldCenter;
     private AudioSource _audioSource;
     private bool Alive;
     
@@ -42,12 +44,17 @@ public class PlayerController : MonoBehaviour
     private Animator Upper_Body_Animator; 
     private Animator Lower_Body_Animator; 
     private Animator Shotgun_Animator;
+    [Header("Animation")]
+    [SerializeField] private Sprite _neutralSprite;
+    [SerializeField] private Sprite _deadSprite;
     [SerializeField] private float _deathDelay = 2;
+    [SerializeField] private GameObject _fireworkPrefab;
     #endregion
 
     #region Audio
     [Header("Audio")]
     [SerializeField] private AudioClip _audioBunnyLand;
+    [SerializeField] private AudioClip _audioFireFirework;
     #endregion
 
     private void Start()
@@ -58,6 +65,7 @@ public class PlayerController : MonoBehaviour
        _spriteRenderer = GetComponent<SpriteRenderer>();
        _feetCollider = GetComponent<BoxCollider2D>();
        _audioSource = GetComponent<AudioSource>();
+       _animator = GetComponent<Animator>();
        _mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
        _ammo = _magSize; 
        _magUI.InitUI(_magSize);
@@ -71,6 +79,14 @@ public class PlayerController : MonoBehaviour
        Shotgun_Animator.SetFloat("AnimationSpeedModifier", 1/_fireRate);
        _shotgunTransform = transform.GetChild(2).transform;
        _shotgunController = transform.GetChild(2).GetComponent<ShotgunController>();
+       
+       // Get the main camera
+       Camera mainCamera = Camera.main;
+       // Find the center of the screen in screen-space coordinates
+       Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, mainCamera.nearClipPlane);
+       // Convert screen-space to world-space
+       _worldCenter = mainCamera.ScreenToWorldPoint(screenCenter); 
+       print("Worldcenter: " + _worldCenter);
     }
 
     private void Update()
@@ -135,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void die()
+    public void Die()
     {
         Alive = false;
         StartCoroutine(DeathAnimation());
@@ -146,13 +162,55 @@ public class PlayerController : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+        _spriteRenderer.sprite = _deadSprite;
         _spriteRenderer.enabled = true;
         yield return new WaitForSeconds(_deathDelay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void Victory(String scene)
+    {
+        Alive = false;
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        _spriteRenderer.sprite = _neutralSprite;
+        _spriteRenderer.enabled = true;
+        _spriteRenderer.flipX = true;
+        StartCoroutine(VictoryAnimation(scene));
+        MusicController.Instance._audioSource.Stop();
+    }
+
+    IEnumerator VictoryAnimation(String scene)
+    { 
+        yield return new WaitUntil(() => _isGrounded == true);
+        yield return new WaitForSeconds(0.2f); 
+        _animator.SetTrigger("Victory");
+        yield return new WaitForSeconds(4.3f); 
+        SceneManager.LoadScene(scene);
+    }
+
+    IEnumerator VictoryFirework()
+    {
+        MusicController.Instance.VictoryJingle();
+        _audioSource.clip = _audioFireFirework;
+        _audioSource.Play();
+        yield return new WaitForSeconds(0);
+        // Firework
+        print("Worldcenter in use: " + _worldCenter);
+        Vector3[] Arr = {new Vector3(_worldCenter.x -3, _worldCenter.y + 2, 0), new Vector3(_worldCenter.x, _worldCenter.y + 3, 0), new Vector3(_worldCenter.x + 3, _worldCenter.y + 2, 0) };
+        for (int i = 0; i < Arr.Length; i++)
+        {
+            GameObject fireworkRef = Instantiate(_fireworkPrefab, Arr[i], Quaternion.identity);
+            FireworkController fireworkControllerRef = fireworkRef.GetComponent<FireworkController>();
+            fireworkControllerRef._speed = 0;
+            fireworkControllerRef._delay = 1.5f;
+        }
+        // Vector3 pos = new Vector3(0,2,0);
+    }
     
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        
     }
 }
